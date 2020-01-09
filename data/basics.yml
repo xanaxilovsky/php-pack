@@ -1,11 +1,11 @@
 category: Basics
 questions:
     -
-        question: 'Which of the following tags are an acceptable way to begin a PHP Code block?'
+        question: 'Which of the following tags are an acceptable way to begin a PHP code block?'
         answers:
-            - {value: '<SCRIPT LANGUAGE="php">', correct: true}
+            - {value: '<SCRIPT LANGUAGE="php">', correct: false}
             - {value: '<!', correct: false}
-            - {value: '<%', correct: true}
+            - {value: '<%', correct: false}
             - {value: '<?', correct: true}
 
     -
@@ -16,19 +16,19 @@ questions:
             - {value: '${0x0}', correct: false}
             - {value: '$0x0', correct: false}
     -
-        question: 'What is the best way to iterate and modify every element of an array using PHP 5?'
+        question: 'What is the best way to iterate and modify every element of an array using PHP?'
         answers:
             - {value: You cannot modify an array during iteration., correct: false}
-            - {value: 'for($i = 0; $i < count($array); $i++) { /* ... * / }', correct: false}
-            - {value: 'foreach($array as $key => &$val) { /* ... * / }', correct: true}
-            - {value: 'foreach($array as $key => $val) { /* ... * / }', correct: false}
-            - {value: 'while(list($key, $val) = each($array)) { /* ... * / }', correct: false}
+            - {value: 'for ($i = 0; $i < count($array); $i++) { /* ... * / }', correct: false}
+            - {value: 'foreach ($array as $key => &$val) { /* ... * / }', correct: true}
+            - {value: 'foreach ($array as $key => $val) { /* ... * / }', correct: false}
+            - {value: 'while (list($key, $val) = each($array)) { /* ... * / }', correct: false}
     -
         question: |
                        What is the output of the following PHP code?
                        define("FOO", 10);
-                       $array = [10 => FOO,"FOO" => 20];
-                       print $array[$array[FOO]] * $array["FOO"];
+                       $array = [10 => FOO, "FOO" => 20];
+                       echo $array[$array[FOO]] * $array["FOO"];
 
         answers:
             - {value: FOO, correct: false}
@@ -45,7 +45,7 @@ questions:
                        $d = $b + $c;
                        $e = $d * $b;
                        $f = ($d + $e) % $a;
-                       print ($f + $e);
+                       echo ($f + $e);
         answers:
             - {value: 643.75, correct: true}
             - {value: 432, correct: false}
@@ -59,7 +59,7 @@ questions:
                         $b = 0xA;
                         $c = 2;
 
-                        print $a + $b + $c;
+                        echo $a + $b + $c;
         answers:
             - {value: '20', correct: true}
             - {value: '22', correct: false}
